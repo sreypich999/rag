@@ -1,10 +1,8 @@
 streamlit
-pypdf
 langchain
-langchain-google-genai
 langchain-community
-chromadb
-langchain-huggingface 
-sentence-transformers 
-langchain-chroma 
 langchain-google-genai
+langchain-chroma
+langchain-huggingface
+sentence-transformers
+pypdf
