@@ -1,5 +1,4 @@
-# RAG Chroma Gemini App
-
+# RAG 
 A powerful PDF Chat Assistant that combines Retrieval-Augmented Generation (RAG) with Google's Gemini AI for intelligent document processing and conversational querying.
 
 ## 🚀 Features
