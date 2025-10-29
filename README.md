@@ -21,19 +21,21 @@ A powerful PDF Chat Assistant that combines Retrieval-Augmented Generation (RAG)
 - **Vector Database**: [ChromaDB](https://www.trychroma.com/)
 - **Embeddings**: [HuggingFace Transformers](https://huggingface.co/docs/transformers/index)
 - **RAG Framework**: [LangChain](https://www.langchain.com/)
-- **PDF Processing**: [PyPDF2](https://pypdf2.readthedocs.io/) + Gemini AI
+- **PDF Processing**: [PyPDF](https://pypdf.readthedocs.io/) + Gemini AI
+- **Package Manager**: [uv](https://github.com/astral-sh/uv)
 
 ## 📋 Prerequisites
 
 - Python 3.10 or higher
+- [uv](https://github.com/astral-sh/uv) package manager
 - Google Gemini API key (get one from [Google AI Studio](https://makersuite.google.com/app/apikey))
 
 ## 🔧 Installation
 
 
-1. **Install dependencies**:
+1. **Install dependencies using uv**:
    ```bash
-   pip install -r requirements.txt
+   uv sync
    ```
 
 2. **Set up environment variables**:
@@ -47,7 +49,7 @@ A powerful PDF Chat Assistant that combines Retrieval-Augmented Generation (RAG)
 
 1. **Run the application**:
    ```bash
-   streamlit run app.py
+   uv run streamlit run app.py
    ```
 
 2. **Access the app**:
@@ -67,11 +69,12 @@ A powerful PDF Chat Assistant that combines Retrieval-Augmented Generation (RAG)
 rag-chroma-gemini-app/
 ├── app.py                 # Main Streamlit application
 ├── main.py               # Alternative entry point
-├── requirements.txt      # Python dependencies
-├── pyproject.toml       # Project configuration
+├── pyproject.toml        # Project configuration (uv)
+├── uv.lock              # uv lock file
 ├── README.md            # This file
 ├── .env                 # Environment variables (API keys)
-├── .streamlit/          # Streamlit configuration
+├── .python-version      # Python version specification
+├── requirements.txt     # Alternative dependency file
 ├── vector_store/        # ChromaDB persistent storage
 └── extracted_*.txt      # Auto-generated text files from PDFs
 ```
@@ -90,4 +93,3 @@ The application requires a Google Gemini API key. You can obtain one from [Googl
 - **Chunk Size**: 1000 characters
 - **Chunk Overlap**: 200 characters
 - **Top-K Retrieval**: 10 most similar chunks
-
